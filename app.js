@@ -12,4 +12,24 @@ $(document).ready(function(){
     $('#contenido').prepend(' <h1>Añado un elelmento de manera dinámica al inicio</h1>');
     $("#color-azul").css('color', 'blue');
     $("#color-azul").css({color: 'blue',background: 'red',padding: '20px'});
+    $("#color-azul").remove();
+    // $("#color-azul").hide();
+    $('img').attr('src','https://phantom-marca.unidadeditorial.es/56d7a68c584868105d4fb6095cbde388/resize/1320/f/jpg/assets/multimedia/imagenes/2021/05/03/16200468975505.jpg');
+    $('img').attr("width","50")
+    var parrafo =$('#res')
+    $('.btn-primary').click(function (e) { 
+        parrafo.addClass('display-4')
+        
+    });
+    $('.btn-danger').click(function (e) { 
+        parrafo.removeClass('display-4')
+        
+    });
+    $('.btn-warning').click(function (e) { 
+        parrafo.toggleClass('display-4')
+        
+    });
+   $('#texto').keyup(function (e) { 
+       $('#saludo').html($('#texto').val());
+   });
 })
